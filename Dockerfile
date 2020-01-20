@@ -20,9 +20,10 @@ RUN pip3 install -v requests -i https://pypi.python.org/simple/
 
 
 
-RUN git clone https://github.com/alyosama/virnet
-WORKDIR /virnet
-    # mv /virnet/* /
+RUN git clone https://github.com/alyosama/virnet && \
+
+    mv /virnet/* / && \ 
+    chmod 777 /*.py
     #  && pip3 install -r requirments.txt
 #  requirements does not work... some weird 404 error occuerd
-ENV PATH /virnet:$PATH
+# ENV PATH /virnet:$PATH
