@@ -5,29 +5,23 @@ RUN apt update && apt install -y git  \
                                  python3-pip 
                                  
 
+ 
+RUN pip3 install -U tensorflow
+RUN pip3 install -U keras
+RUN pip3 install -U pandas
+RUN pip3 install -U biopython
+RUN pip3 install -U scikit-learn
+RUN pip3 install -U numpy
+RUN pip3 install -U pickle-mixin
+RUN pip3 install -U pip
+RUN pip3 install -v requests -i https://pypi.python.org/simple/
 
-RUN pip3 install tensorflow
-RUN pip3 install keras
-RUN pip3 install pandas
-RUN pip3 install biopython
 
-
-
-
-
-# RUN conda config --add channels conda-forge && \
-#     conda config --add channels bioconda && \
-#     conda config --add channels default
-
-# RUN conda install -c conda-forge biopython
-
-# RUN conda install -c conda-forge tensorflow
-# RUN conda install -c conda-forge keras
-# RUN conda install -c conda-forge pandas
 
 
 
 RUN git clone https://github.com/alyosama/virnet && \
-    cd /virnet && pip3 install requirments.txt
-
+    cd /virnet
+    #  && pip3 install -r requirments.txt
+#  requirements does not work... some weird 404 error occuerd
 ENV PATH /virnet:$PATH
