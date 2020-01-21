@@ -18,7 +18,8 @@ RUN pip3 install -v requests -i https://pypi.python.org/simple/
 
 RUN git clone https://github.com/alyosama/virnet && \
      cp -r /virnet/* / && \ 
-     chmod 777 /*.py
+     chmod 777 /*.py && \
+     cp /*.py /bin/
     #  && pip3 install -r requirments.txt
 #  requirements does not work... some weird 404 error occuerd
 WORKDIR /virnet
