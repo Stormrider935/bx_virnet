@@ -8,7 +8,7 @@ RUN apt update && apt install -y git  \
 RUN pip3 install -U tensorflow keras pandas biopython scikit-learn numpy pickle-mixin pip
 RUN pip3 install -v requests -i https://pypi.python.org/simple/
 
-
+# git contains now absolute paths in python after issue written
 RUN git clone https://github.com/alyosama/virnet && \
     chmod 777 /virnet/*.py
 #  && pip3 install -r requirments.txt
