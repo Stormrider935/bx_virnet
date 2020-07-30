@@ -14,3 +14,5 @@ RUN git clone https://github.com/alyosama/virnet && cd virnet && git pull && \
 #  && pip3 install -r requirments.txt
 #  requirements does not work... some weird 404 error occuerd
 ENV PATH /usr/bin/python3.6:/virnet/:$PATH
+
+# working tag in wtp : 0.6.3
