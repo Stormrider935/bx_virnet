@@ -3,9 +3,15 @@ RUN apt update && apt install -y procps git  \
     python3.6  \
     python3-pip 
 
+RUN python3 -m pip install --upgrade pip
 
+RUN pip3 install -U tensorflow==2.2.0 \
+ keras pandas==1.1.0 \
+ biopython==1.76 \
+ scikit-learn==0.22.2.post1 \
+ numpy==1.18.4 \
+ pickle-mixin==1.0.2 pip
 
-RUN pip3 install -U tensorflow keras pandas biopython scikit-learn numpy pickle-mixin pip
 RUN pip3 install -v requests -i https://pypi.python.org/simple/
 
 
