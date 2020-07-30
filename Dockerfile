@@ -1,5 +1,5 @@
 FROM ubuntu:bionic
-RUN apt update && apt install -y git  \
+RUN apt update && apt install -y procps git  \
     python3.6  \
     python3-pip 
 
